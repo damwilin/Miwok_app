@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 
 /**
@@ -18,13 +17,11 @@ import java.util.ArrayList;
 public class WordAdapter extends ArrayAdapter<Word> {
     private int backgroundColorResourceId;
 
-
     public WordAdapter(Activity context, ArrayList<Word> words, int colorResourceId) {
         super(context, 0, words);
         this.backgroundColorResourceId = colorResourceId;
 
     }
-
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -48,7 +45,6 @@ public class WordAdapter extends ArrayAdapter<Word> {
             imageView.setVisibility(View.VISIBLE);
         } else
             imageView.setVisibility(View.GONE);
-
 
         View textContainer = listItemView.findViewById(R.id.text_container);
         int color = ContextCompat.getColor(getContext(), backgroundColorResourceId);
