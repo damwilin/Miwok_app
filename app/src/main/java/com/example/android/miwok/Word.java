@@ -9,16 +9,25 @@ public class Word {
     private String wordMiwok;
     private String wordEnglish;
     private int imageResourceId = NO_IMAGE_PROVIDED;
+    private int audioResourceId;
 
-    public Word(String wordMiwok, String wordEnglish) {
+    public Word(String wordMiwok, String wordEnglish, int audioResourceId) {
         this.wordMiwok = wordMiwok;
         this.wordEnglish = wordEnglish;
+        this.audioResourceId = audioResourceId;
     }
 
-    public Word(String wordMiwok, String wordEnglish, int imageResourceId) {
+    public Word(String wordMiwok, String wordEnglish, int imageResourceId, int audioResourceId) {
         this.wordMiwok = wordMiwok;
         this.wordEnglish = wordEnglish;
         this.imageResourceId = imageResourceId;
+        this.audioResourceId = audioResourceId;
+
+    }
+
+
+    public int getAudioResourceId() {
+        return audioResourceId;
     }
 
     public String getWordMiwok() {
